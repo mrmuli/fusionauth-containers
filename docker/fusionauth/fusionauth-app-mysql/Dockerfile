@@ -13,14 +13,14 @@
 #
 # Generally speaking downloading this jar at runtime works just fine. However
 # if you have blocked outbound network access or are concerned with this
-# external network depdendency leading to possible failures during startup you
+# external network dependency leading to possible failures during startup you
 # may optionally download the jar ahead of time.
 #
 # During startup, if we identify the correct MySQL connector jar in the
 # classpath the download attempt will be skipped.
 #
-# Re-packacing the FusionAuth Docker image with the MySQL connector is one
-# way of keeping this download from occuring at runtime.
+# Re-packaging the FusionAuth Docker image with the MySQL connector is one
+# way of keeping this download from occurring at runtime.
 #
 # This file is provided as an example only.
 # -----------------------------------------------------------------------------
