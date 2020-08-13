@@ -2,7 +2,7 @@
 # FusionAuth Java Dockerfile
 #
 # Build:
-#   > docker build -t fusionauth/fusionauth-java:14-jdk-alpine3.11.5 .
+#   > docker build -t fusionauth/fusionauth-java:14-jdk-alpine .
 #
 # Publish:
 #   > docker push fusionauth/fusionauth-java:14-jdk-alpine3.11.5
@@ -16,7 +16,7 @@ RUN /opt/openjdk-14/bin/jlink --compress=2 \
      --add-modules java.base,java.compiler,java.desktop,java.instrument,java.management,java.naming,java.rmi,java.security.jgss,java.security.sasl,java.sql,java.xml.crypto,jdk.attach,jdk.crypto.ec,jdk.jdi,jdk.localedata,jdk.scripting.nashorn,jdk.unsupported \
      --output /jlinked
 
-FROM alpine:3.11.5
+FROM alpine:latest
 COPY --from=build /jlinked /opt/openjdk
 
 ENV JAVA_HOME=/opt/openjdk/
